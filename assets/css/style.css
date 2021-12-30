@@ -1,0 +1,37 @@
+:root{
+    --font: Arial, Helvetica, sans-serif;
+}
+
+
+
+#quiz {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    height: 500px;
+}
+
+#quiz h1 {
+    border: groove;
+    padding: 40px 30px;
+    box-shadow: 0 15px 15px 4px rgba(122, 19, 206, 0.445); 
+    font-family: var(--font);
+}
+
+.button{
+    height: 30px;
+    width: 50px;
+}
+
+#header{
+    display: flex;
+    justify-content: space-between;
+    text-align: start;
+    font-family: var(--font);
+    font-size: 20px;
+} 
+
+#HighS{
+    text-decoration: underline;
+}
