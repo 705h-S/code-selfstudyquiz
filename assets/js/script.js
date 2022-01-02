@@ -11,4 +11,36 @@
 // 
 
 
-console.log ("hello world");
+var startBtn = document.querySelector(".button");
+var timer = document.querySelector(".time");
+
+var timeleft =60;
+
+
+function startQuiz(){
+    console.log("Quiz begins")
+
+      
+        var timeInterval = setInterval(function () {
+        
+          timeleft--; 
+          timer.textContent = timeleft + "s";
+      
+          if(timeleft === 0) {
+              console.log("Game over!")
+      
+            clearInterval(timeInterval);
+    
+          }
+        }, 1000 );
+
+}
+
+
+
+
+
+
+
+
+startBtn.addEventListener("click", startQuiz); 
