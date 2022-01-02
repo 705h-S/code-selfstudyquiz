@@ -12,28 +12,36 @@
 
 
 var startBtn = document.querySelector(".button");
-var timer = document.querySelector(".time");
-
-var timeleft =60;
+var timer = document.getElementById("time");
 
 
+
+
+
+// When Start Button is clicked timer starts countdown and quiz begins 
 function startQuiz(){
     console.log("Quiz begins")
-
+    
+    //  Countdown function 
+    function timeEl() {
+            // player has 1min or 60s to finish quiz.
+        var timeleft =60;
       
         var timeInterval = setInterval(function () {
         
           timeleft--; 
           timer.textContent = timeleft + "s";
-      
+           // quiz stops when timer hits 0
           if(timeleft === 0) {
               console.log("Game over!")
       
             clearInterval(timeInterval);
     
           }
-        }, 1000 );
+        }, 1000);
+    }
 
+        timeEl();
 }
 
 
