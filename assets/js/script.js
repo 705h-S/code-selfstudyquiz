@@ -13,41 +13,79 @@
 
 var startBtn = document.querySelector(".button");
 var timer = document.getElementById("time");
+var highscore = document.getElementById("HighS");
+var quiz = document.querySelector(".question");
+var hide = document.getElementById("quiz");
 
  // An array with the questions and answers that will show up in the quiz
 const questions = [
     {
-        ask: " This is the first generic question? \n (a) first answer\n (b) secound answer\n (c) Third answer\n (d) fourth answer",
-        answer: "b"
+        ask: " This is the first generic question?",
+        input: {
+            a: "first answer",
+            b: "secound answer",
+            c: "third answer",
+            d: "fourth answer"
+        },
+        corrAnsw: "b"
     },
 
     {
-        ask: " This is the secound generic question? \n (a) first answer\n (b) secound answer\n (c) Third answer\n (d) fourth answer",
-        answer: "d"
+        ask: " This is the secound generic question?",
+        input: {
+            a: "first answer",
+            b: "secound answer",
+            c: "third answer",
+            d: "fourth answer"
+        },
+        corrAnsw: "d"
     },
 
     {
-        ask: " This is the third generic question? \n (a) first answer\n (b) secound answer\n (c) Third answer\n (d) fourth answer",
-        answer: "a"
+        ask: " This is the third generic question?",
+        input: {
+            a: "first answer",
+            b: "secound answer",
+            c: "third answer",
+            d: "fourth answer"
+        },
+        corrAnsw: "a"
     },
 
     {
-        ask: " This is the fourth generic question? \n (a) first answer\n (b) secound answer\n (c) Third answer\n (d) fourth answer",
-        answer: "c"
+        ask: " This is the fourth generic question?",
+        input: {
+            a: "first answer",
+            b: "secound answer",
+            c: "third answer",
+            d: "fourth answer"
+        },
+        corrAnsw: "c"
     },
 
     {
-        ask: " This is the fith  generic question? \n (a) first answer\n (b) secound answer\n (c) Third answer\n (d) fourth answer",
-        answer: "a"
+        ask: " This is the fith generic question?",
+        input: {
+            a: "first answer",
+            b: "secound answer",
+            c: "third answer",
+            d: "fourth answer"
+        },
+        corrAnsw: "b"
     },
 
     {
-        ask: " This is the sixth  generic question? \n (a) first answer\n (b) secound answer\n (c) Third answer\n (d) fourth answer",
-        answer: "d"
+        ask: " This is the sixth generic question?",
+        input: {
+            a: "first answer",
+            b: "secound answer",
+            c: "third answer",
+            d: "fourth answer"
+        },
+        corrAnsw: "a"
     }
-    
 
-]
+];
 // score is initially set to 0 with time left define in score
 let score = 0;
 
@@ -57,9 +95,10 @@ let score = 0;
 
 // When Start Button is clicked timer starts countdown and quiz begins 
 function startQuiz(){
-    console.log("Quiz begins")
+    console.log("Quiz begins");
     
     //  Countdown function 
+    timeEl();
     function timeEl() {
             // player has 1min or 60s to finish quiz.
         var timeleft =60;
@@ -76,9 +115,21 @@ function startQuiz(){
     
           }
         }, 1000);
-    }
+    };
+    // loops through array of questions and displays prompts
+    prompts();
+    function prompts(){
+        //  hides the initial start quiz html prompts
+           hide.style.display = "none"; 
+        
+    
+    };
 
-        timeEl();
+
+
+
+
+
 }
 
 
