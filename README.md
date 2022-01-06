@@ -23,7 +23,7 @@ Through Javascript I am able to create a timed quiz.
 
 * [Code quiz](#)
 
-![website](#)
+![website](images/website.png)
 
 ---
 
@@ -39,25 +39,50 @@ The page lay out is really simple in terms of CSS. Thiers a highscore, timer , a
 
 When you press on the "start" button a timer will go off 
 
-![.gifnav](#)
+![.gifnav](images/timer.gif)
 
+
+ > code source for timer function
+
+```javascript
+
+function timeEl() {
+            // player has 1min or 60s to finish quiz.
+        var timeleft =60;
+      
+        var timeInterval = setInterval(function () {
+        
+          timeleft--; 
+          timer.textContent = timeleft + "s";
+           // quiz stops when timer hits 0
+          if(timeleft === 0) {
+              console.log("Game over!")
+      
+            clearInterval(timeInterval);
+    
+          }
+        }, 1000);
+    };
+   
+```
 
 ### Saves Highscore
 
 When user completes quiz, their score is the time left on the timer. and it saved locally.
+I have yet to have localStorage.setItem()  
+localStorage.getItem().
 
-![.gifnav](#)
+
+---
+
 
 ### quiz itself
 
-main function of the application is that it should have questions appear withen the html. If user answers incorrectly 10 secounds is deducted from timer. making user loose points.
+main function of the application is that it should have questions appear withen the html. If user answers incorrectly 10 secounds is deducted from timer. making user loose points. I have yet to make the main function work.
 
-```javascript
-var alpab = 
-   
-```
 
-![random](#)
+
+
 
 ---
 

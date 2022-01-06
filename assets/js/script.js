@@ -15,6 +15,7 @@ var startBtn = document.querySelector(".button");
 var timer = document.getElementById("time");
 var highscore = document.getElementById("HighS");
 var questionContainerEl = document.getElementById("question-container");
+var viewHighScores = document.getElementById("highscores-link");
 var hide = document.getElementById("quiz");
 
  // An array with the questions and answers that will show up in the quiz
