@@ -17,39 +17,7 @@ var highscore = document.getElementById("HighS");
 var hide = document.getElementById("quiz");
 
  // An array with the questions and answers that will show up in the quiz
- var questions = [
-   
-    { 
-        question: "generic question?", 
-        answers: " answer a\n answer 2\n answer b\n answerc \n answer5",
-        CA: "a"
-    },
-    { 
-        question: "generic question?", 
-        answers: " answer a\n answer 2\n answer b\n answerc \n answer5",
-        CA: "b"
-    },
-    { 
-        question: "generic question?", 
-        answers: " answer a\n answer 2\n answer b\n answerc \n answer5",
-        CA: "b"
-    },
-    { 
-        question: "generic question?", 
-        answers: " answer a\n answer 2\n answer b\n answerc \n answer5",
-        CA: "4"
-    },
-    { 
-        question: "generic question?", 
-        answers: " answer a\n answer 2\n answer b\n answerc \n answer5",
-        CA: "a"
-    },
-    { 
-        question: "generic question?", 
-        answers: " answer a\n answer 2\n answer b\n answerc \n answer5",
-        CA: "5"
-    },
- ]
+ var questions;
    
 // score is initially set to 0 with time left define in score
 let score = 0;
@@ -83,21 +51,8 @@ function startQuiz(){
     };
     // loops through array of questions and displays prompts
    
-    function displayQuestion(){
-        // insures that each array is going through
-        for (var index = 0; index < questions.length; index++) {
-            var userInput = prompt(questions[index].questions,  "answers")
-            if(userInput == questions[i].CA){
-                alert( "yes");
-            }
-            else{
-                alert("wrong");
-                // time should be subtracted 
-                timeleft -= 10; 
-            }
-        }
+    function displayQuestion(){}
 
-    }
         
    
 
