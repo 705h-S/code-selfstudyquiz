@@ -14,6 +14,7 @@
 var startBtn = document.querySelector(".button");
 var timer = document.getElementById("time");
 var highscore = document.getElementById("HighS");
+var questionContainerEl = document.getElementById("question-container");
 var hide = document.getElementById("quiz");
 
  // An array with the questions and answers that will show up in the quiz
@@ -27,11 +28,12 @@ function startQuiz(){
     console.log("Quiz begins");
    //  hides the initial start quiz html prompts
    hide.style.display = "none"; 
+   questionContainerEl.classList.remove("ninja");
    timeEl();
-   displayQuestion()
+   
 }
 //  Countdown function 
-    timeEl();
+    
     function timeEl() {
             // player has 1min or 60s to finish quiz.
         var timeleft =60;

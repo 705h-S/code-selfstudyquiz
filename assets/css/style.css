@@ -2,14 +2,16 @@
     --font: Arial, Helvetica, sans-serif;
 }
 
-
+.ninja {
+    visibility: hidden;
+}
 
 #quiz {
     display: flex;
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    height: 500px;
+    height: 200px;
 }
 
 #quiz h1 {
@@ -36,3 +38,10 @@
     text-decoration: underline;
 }
 
+#question-container{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    height: 200px;
+}
